@@ -1,119 +1,711 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <div class="avatar">
-         <img src="download.jpg" alt="">
-        </div>
-        <div class="name">
-             <h1>Nguyễn Duy Lợi</h1>
-             <div class="specialize">Developer</div>
-             <ul class="contact">
-                <p>nguyenanhnghia81@gmail.com</p>
-                <p align="left"> <a href="01.pdf" target="_blank">Resume</a>|
-      <a href="https://www.facebook.com/profile.php?id=100022289754032">Facebook </a>|
-      <a href="https://github.com/anhnghia2011">GitHub</a> </p>
-        </div>
-        <div class="info">
-             <ul>
-                 <li>From <b>Dak Lak</b> - VietNam</li>
-                 <li>20/01/2002</li>
-                 <li>SGU University</li>
-             </ul>
-        </div>
-        <div class="intro">
-          <h2>INTRODUCE</h2>
-          I am studying at Saigon University, my major here is Information Technology.
-          For the information technology industry, I find it quite interesting with website programming, so most of the time I learn about software technologies.
-        </div>
-        </hr>
-        <div class="experience">
-         <h2>EXPERIENCE</h2>
- 
-         <div class="item">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-             <div class="des">
-                plays a necessary role in building and developing front-end software and web using HTML, CSS and JavaScript.<br>
-                Participate in the full software development process, from requirements analysis, interface design, implementation and testing, reporting.
-            </div>
-         </div>
-             <div class="item">
-                 <div class="des">
+        <!--==================== EMAIL SERVICE ====================-->
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Email.JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('gF3M_-jS8KuvoCpV4');
+            })();
+        </script>
 
-                  </div>
-             </div>
-             <h2 class="skills">
-                 SKILLS
-             </h2>
-             <ul>
-                 <li>HTML</li>
-                 <li>CSS</li>
-                 <li>PHP</li>
-                 <li>MySql</li>
-                 <li>Git</li>
-                 <li>Java</li>
-             </ul>
- 
-        </div>
-        <div class="project">
-         <h3>Project E-Learning-Online</h3>
-<br>Using HTML/CSS, StringBoot, SQL Server,..<br />
-<a href="https://github.com/hieugit123/E-Learning-Online">github.com/hieugit123/E-Learning-Onlineb</a>
-<ul>
-      <li>Dự án làm việc nhóm cho học phần Chuyên đề J2EE.</li>
-      <li>Học được cách sử dụng PHP và xử lý dữ liệu Back-end với SQLServer.</li>
-</ul>
-<svg class="image-png" width="325" height="325" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <image href="02.png" width="110" height="100" />
-      </svg>
-<hr>
-<h4>Project MiniStoreManagement</h4>
-<br>Using c#,windows Form,..<br />
-<a href="https://github.com/ngahehz/MiniStoreManagement">github.com/ngahehz/MiniStoreManagement</a>
-<ul>
-      <li>Dự án làm việc nhóm cho học phần 	Ngôn ngữ lập trình C#.</li>
-      <li>Làm quen với C#.</li>
-</ul>
-<div class="social-links">
-        <a
-          href="https://github.com/anhnghia2011"
-          aria-label="Github"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Github"
-          >
-            <path
-              d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z"
-            />
-          </svg>
+        <!--==================== CALENDAR SERVICE ====================-->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+        <!--==================== TITLE and Favicon ====================-->
+        <title>Erol Bicer's Portfolio 👋</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+        <!-- MS Tile - for Microsoft apps-->
+        <meta name="msapplication-TileImage" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true" />    
+
+        <!-- HTML Meta Tags -->
+        <title>Erol Bicer's Portfolio 👋</title>
+        <meta name="description" content="High-level experience in nuclear safety analysis and multinational nuclear project development.">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://www.erolbicer.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Erol Bicer's Portfolio 👋">
+        <meta property="og:description" content="High-level experience in nuclear safety analysis and multinational nuclear project development.">
+        <meta property="og:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="erolbicer.com">
+        <meta property="twitter:url" content="https://www.erolbicer.com/">
+        <meta name="twitter:title" content="Erol Bicer's Portfolio 👋">
+        <meta name="twitter:description" content="High-level experience in nuclear safety analysis and multinational nuclear project development.">
+        <meta name="twitter:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2367QRTG56');
+        </script>
+
+    </head>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Duy Lợi</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme Change Buttons -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home" data-id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.facebook.com/profile.php?id=100009098299445" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://www.instagram.com/nloi24/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-book-open"></i>
+                            </a>
+                            <a href="https://github.com/nloi241" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+
+                                    <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/loi.png"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I am Duy lợi</h1>
+                            <h3 class="home__subtitle">SoftWare Engineer</h3>
+                            <p class="home__description">I am studying in SGU university HoChiMinh</p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll Down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about" data-id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle">Introduction</span>
+
+                <div class="about__container container grid">
+                    <img src="assets/img/school.png" alt="Erol Bicer Nuclear Power Plants Summit Session" class="about__img">
+
+
+                    <div class="about__data">
+                        <p class="about__description">I am a student at the University of Saigon. I am passionate about and hope to use my education to make a difference in the world.
+
+                            I am originally from Vietnam, but I have always wanted to live in Ho Chi Minh City. I am excited to be a part of the vibrant and diverse community at the University of Saigon, and I am looking forward to all that the city has to offer.
+                            
+                            
+                            
+                            </p>
+
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">01</span>
+                                <span class="about__info-name">Years' <br> Experience</span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">3</span>
+                                <span class="about__info-name">Projects <br> Completed</span>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/loi-cv.pdf" class="button button--flex">
+                                Download CV<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills" data-id="skills">
+                <h2 class="section__title">Skills</h2>
+                <span class="section__subtitle">Technical Competence</span>
+
+                <div class="skills__container container grid">
+                    <div>
+                        <!--==================== SKILLS 1 ====================-->
+                        <div class="skills__content skills__open">
+                            <div class="skills__header">
+                                <i class="uil uil-brackets-curly skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">System Codes</h1>
+                                    <!-- <span class="skills__subtitle">More than 8 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">RELAP5</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">SNAP</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div> -->
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">GOTHIC</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">MARS-KS</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">SPACE</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CAP</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== SKILLS 2 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-vector-square skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">CFD Codes</h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">OpenFOAM</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CUPID</h3>
+                                        <span class="skills__number">Beginner</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__20"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div>
+                        <!--==================== SKILLS 3 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-arrow skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Programming Codes</h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">MATLAB</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__60"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">FORTRAN</h3>
+                                        <span class="skills__number">Intermediate</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__40"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">C++</h3>
+                                        <span class="skills__number">Beginner</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__20"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">HTML/CSS</h3>
+                                        <span class="skills__number">Intermediate</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__40"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>  
+
+                        <!--==================== SKILLS 4 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-code-branch skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Miscellaneous </h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">DOS/UNIX</h3>
+                                        <span class="skills__number">Beginner</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__20"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CATIA</h3>
+                                        <span class="skills__number">Intermediate</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__40"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Origin</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__100"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">ParaView</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Mathcad</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Git/GitHub</h3>
+                                        <span class="skills__number">Intermediate</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__60"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">MS Office</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__100"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
+                    </div> 
+                </div>
+            </section>
+
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section" id="projects" data-id="projects">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">Involved Projects</span>
+
+                <div class="projects__container container grid">
+                    <!--==================== PROJECTS 1 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">SMR & MMR</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Small and Micro Modular Reactors Technology Analyses </h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Literature and Technology Review</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Technical Feasibility Analysis</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Commercial Feasibility Analysis</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!--==================== PROJECTS 2 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">SMART</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">System-Integrated Modular Advanced Reactor Passive Containment Cooling System</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Modeling of SMART CPRSS through GOTHIC</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Literature Survey for the Design and Arrangement of Sparger Layout for SMART CPRSS</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Direct contact condensation</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Chugging</p>
+                                        </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Modeling of SISTA through MARS-KS</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>CAP Verification</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Simulations of condensation and boiling conceptual problems through MARS</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Simulations of a conceptual problem through MARS and SPACE</p>
+                                        </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>CAP Input Preparation for sub P/T Analysis</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>CPRSS Hydraulics and Heat structure Calculation Sheet Preparation for CAP</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>         
+
+                    <!--==================== PROJECTS 3 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">PGSFR</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Prototype Gen-IV Sodium-Cooled Fast Reactor Condition Analysis Project</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Simulations of Design Basis Events through MARS-LMR</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Leakage of Intermediate Heat Transport System Pipe</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Reactor Vessel Leak into the Containment Vessel</p>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>           
+
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact" data-id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in Touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Call Me</h3>
+                                <span class="contact__subtitle">+84-936364841</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <p><a class="contact__subtitle" href="mailto:loixem2@gmail.com">loixem2@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">VietNam</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Full Name</label>
+                                <input type="text" placeholder="Enter full name" class="contact__input" id="fullName" onkeyup="validateName()">
+                                <span id="name-error" class="contact__subtitle"></span>
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" placeholder="Enter email address" class="contact__input" id="email_id" onkeyup="validateEmail()">
+                                <span id="email-error" class="contact__subtitle"></span>
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter a subject line" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" cols="0" rows="7" placeholder="Enter your message" class="contact__input" id="message" onkeyup="validateMessage()"></textarea>
+                            <span id="message-error" class="contact__subtitle"></span>
+                        </div>
+                        <div>
+                            <a onclick="return SendMail()" class="button button--flex">
+                            Send Message
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
-        <a
-          href="https://www.facebook.com/profile.php?id=100022289754032"
-          aria-label="Facebook"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Facebook">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.062 0H.938C.42 0 0 .42 0 .938v18.124c0 .517.42.938.938.938h9.89v-7.254H8.275V9.485h2.553V7.265c0-2.532 1.547-3.91 3.8-3.91 1.076 0 2.004.08 2.275.115v2.647h-1.562c-1.226 0-1.465.583-1.465 1.44v1.886h2.937l-.61 3.08h-2.327V20h4.565c.518 0 .938-.42.938-.938V.937c0-.518-.42-.937-.938-.937z" fill="#3B5998"/>
-          </svg>
 
-        </a>
-             </div>
-         </div>
-        </div>
-     </div>
-</body>
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
